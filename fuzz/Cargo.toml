@@ -1,0 +1,56 @@
+[package]
+name = "chiffre-rsa-core-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+# Même raison que chiffre_aes_core/core/fuzz/Cargo.toml : indique
+# explicitement à Cargo que ce répertoire est sa PROPRE racine de
+# résolution plutôt que de remonter chercher un workspace parent.
+[workspace]
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.chiffre-rsa-core]
+path = ".."
+
+# Profil release avec assertions de debug/overflow-checks activées, comme
+# chiffre_aes_core : nécessaire pour un fuzzing performant tout en
+# détectant les dépassements arithmétiques qui passeraient inaperçus en
+# release pur.
+[profile.release]
+debug = 1
+debug-assertions = true
+overflow-checks = true
+
+[[bin]]
+name = "unwrap_key"
+path = "fuzz_targets/unwrap_key.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "from_spki_pem"
+path = "fuzz_targets/from_spki_pem.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "from_pkcs8_pem"
+path = "fuzz_targets/from_pkcs8_pem.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "verify"
+path = "fuzz_targets/verify.rs"
+test = false
+doc = false
+bench = false
