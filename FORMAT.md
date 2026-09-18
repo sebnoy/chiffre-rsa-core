@@ -227,8 +227,7 @@ effectuée, dans le même esprit que `chiffre_aes_core/FORMAT.md` §11.
 
 ## 10. Statut
 
-Document à jour à la date de rédaction (crate `chiffre-rsa-core` v0.1.0,
-avant toute release publiée). À réviser si l'un des choix ci-dessus
-change (paramètres scrypt exposés, schéma OAEP paramétrable, etc.) — ce
-fichier fait foi sur les encodages produits, indépendamment de
-l'implémentation.
+Document à jour à la date de rédaction (crate `chiffre-rsa-core` v1.0.0).
+À réviser si l'un des choix ci-dessus change (paramètres scrypt exposés,
+schéma OAEP paramétrable, etc.) — ce fichier fait foi sur les encodages
+produits, indépendamment de l'implémentation.

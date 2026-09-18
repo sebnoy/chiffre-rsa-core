@@ -35,16 +35,16 @@ cargo license
 | serde | MIT OR Apache-2.0 |
 | serde_json | MIT OR Apache-2.0 |
 
-## Dépendance de statut particulier : `chiffre_aes_core`
+## Dépendance particulière : `chiffre_aes_core`
 
-`chiffre-rsa-core` dépend actuellement de `chiffre_aes_core` via une
-révision git précise (`rev = "693b2a5"` sur `main`), **pas** une version
-publiée sur crates.io — le support multi-destinataires (header v2,
-`RawKey`, `Recipient`) n'existe pas encore dans le tag `v1.0.0`. Voir
-[README.md](./README.md) et le `Cargo.toml`. Cette ligne de dépendance
-devra être mise à jour vers une version taguée dès qu'elle sera
-disponible ; la licence de `chiffre_aes_core` (MIT OR Apache-2.0) ne
-change pas selon la façon dont elle est référencée.
+`chiffre-rsa-core` dépend de `chiffre_aes_core` via son tag Git
+`v2.0.0` (pas encore publiée sur crates.io — voir sa propre
+`NOTICE.md` pour l'état exact de ses propres dépendances). Cette
+révision apporte le support multi-destinataires (header v2, `RawKey`,
+`Recipient`) directement utilisé ici (`use chiffre_aes_core::RawKey`
+dans `src/lib.rs`). La licence de `chiffre_aes_core` (MIT OR
+Apache-2.0) ne change pas selon la façon dont elle est référencée
+(tag Git ou, plus tard, version publiée sur crates.io).
 
 ## Dépendances transitives notables
 

@@ -4,9 +4,11 @@ version = "1.0.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "Primitives RSA (génération, OAEP, sérialisation, empreinte) pour chiffre-aes-core"
+repository = "https://github.com/sebnoy/chiffre-rsa-core"
+readme = "README.md"
 
 [dependencies]
-chiffre_aes_core = { git = "https://github.com/sebnoy/chiffre-aes-core", rev = "v2.0.0" }
+chiffre_aes_core = { git = "https://github.com/sebnoy/chiffre-aes-core", tag = "v2.0.0" }
 rsa = "0.9"
 sha2 = "0.10"
 spki = { version = "0.7", features = ["pem"] }

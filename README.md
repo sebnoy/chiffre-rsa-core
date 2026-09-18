@@ -10,11 +10,10 @@ clés/trousseau), qui restent des crates séparées.
 
 # Auteur et statut du projet
 
-Ce crate est jeune (v0.1.0, pas encore publié). Il s'appuie sur
-`chiffre-aes-core` (v1.0.0 pour le cœur symétrique ; le support
-multi-destinataires — header v2, `RawKey`, `Recipient` — n'existe pour
-l'instant que sur sa branche `main`, pas encore tagué). Voir
-[NOTICE.md](./NOTICE.md) pour l'état exact de cette dépendance.
+Ce crate atteint sa v1.0.0. Il s'appuie sur `chiffre-aes-core` v2.0.0
+(tagué), qui apporte le support multi-destinataires (header v2,
+`RawKey`, `Recipient`) utilisé ici — voir [NOTICE.md](./NOTICE.md) pour
+l'état exact de cette dépendance.
 
 Aucun audit de sécurité externe n'a été réalisé à ce jour. La conception
 suit les mêmes principes de rigueur que `chiffre-aes-core` (choix
