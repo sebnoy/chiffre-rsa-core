@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.1.0
+
+Aligne la dépendance sur `chiffre_aes_core` **v2.1.0**. **Aucun changement de
+code, de format ni d'API** de `chiffre-rsa-core`.
+
+- **Dépendance : tag `v2.1.0`** de `chiffre_aes_core`. Ce crate réexporte
+  `Password` (`pub type Password = chiffre_aes_core::Password`) et utilise
+  `RawKey` : une application qui dépend à la fois de `chiffre_aes_core` et de
+  `chiffre-rsa-core` doit n'avoir qu'**une seule** version de
+  `chiffre_aes_core` dans son graphe, faute de quoi ces types, identiques de
+  nom, sont incompatibles entre les deux versions.
+- **Vérification** : les 28 tests du crate passent inchangés contre
+  `chiffre_aes_core` v2.1.0 (API purement additive par rapport à v2.0.0).
+- `Cargo.lock` mis à jour en conséquence.
+
 ## v1.0.0
 
 Première version publiée de `chiffre-rsa-core` — primitives RSA bas
