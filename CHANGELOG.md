@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.2.0
+
+Ajoute une constante publique de version. **Aucun changement de code cryptographique, de format ni d'API existante.**
+
+- **`pub const VERSION: &str = env!("CARGO_PKG_VERSION")`** — les crates dépendants (notamment `enrollement-api`, qui grave la
+  version de ce crate dans les certificats qu'il émet) peuvent désormais LIRE la version réellement compilée au lieu de la
+  recopier à la main dans une constante qui peut devenir fausse avec le temps (bug constaté : `enrollement-api` gravait
+  encore `0.1.0` alors que ce crate était en v1.1.0).
+- Tests : les 28 tests existants passent inchangés ; `clippy` : aucun avertissement ajouté.
+
 ## v1.1.0
 
 Aligne la dépendance sur `chiffre_aes_core` **v2.1.0**. **Aucun changement de

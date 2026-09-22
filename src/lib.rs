@@ -18,6 +18,10 @@ use rsa::{
 };
 use sha2::{Digest, Sha256};
 use spki::{DecodePublicKey, EncodePublicKey};
+
+/// Version de ce crate (`Cargo.toml`) — lue par les crates dépendants (ex. `enrollement-api`) pour graver la
+/// version réellement compilée dans les documents qu'ils émettent, sans valeur codée en dur à tenir à jour à la main.
+pub const VERSION: &str = env!("CARGO_PKG_VERSION");
 use zeroize::Zeroizing;
 
 /// Taille de clé RSA imposée en v1 — voir cahier des charges §4.
