@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.2.1
+
+Version de maintenance issue d'un audit selon le *Guide de développement
+sécurisé en Rust* de l'ANSSI. **Aucun changement de code, de format ni
+d'API.**
+
+- **Dépendances** — `ctutils` 0.4.5 dans `Cargo.lock` et `fuzz/Cargo.lock`
+  (RUSTSEC-2026-0385 : opérations qui n'étaient pas en temps constant).
+  `fuzz/Cargo.lock`, resté à son état initial, est réaligné sur
+  `fuzz/Cargo.toml`.
+- **RUSTSEC-2023-0071 (« Marvin », crate `rsa`)** — aucune version corrigée
+  n'existe. L'avis est ignoré dans `.cargo/audit.toml` avec sa
+  justification : le déchiffrement OAEP et la signature PSS (aveuglée,
+  `BlindedSigningKey`) s'exécutent sur l'appareil de l'utilisateur, hors de
+  portée d'un attaquant distant capable d'en mesurer la durée. À réexaminer
+  dès qu'une version stable de `rsa` corrige l'avis.
+- **Dépendance : tag `v2.1.1`** de `chiffre_aes_core` (version de
+  maintenance, sans changement d'API ni de format). Une application qui
+  dépend des deux crates doit utiliser le même tag `v2.1.1`, faute de quoi
+  `Password` et `RawKey` existent en deux versions incompatibles.
+- **`scripts/verifier.sh`** — enchaîne `clippy` (avertissements refusés),
+  `cargo audit` et les tests ; `cargo audit` seul pour `fuzz`.
+- Tests : les 28 tests passent inchangés.
+
 ## v1.2.0
 
 Ajoute une constante publique de version. **Aucun changement de code cryptographique, de format ni d'API existante.**
