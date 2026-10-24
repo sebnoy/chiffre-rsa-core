@@ -205,7 +205,7 @@ dependencies = [
 
 [[package]]
 name = "chiffre-rsa-core"
-version = "0.1.0"
+version = "1.2.0"
 dependencies = [
  "chiffre_aes_core",
  "pkcs8",
@@ -227,8 +227,8 @@ dependencies = [
 
 [[package]]
 name = "chiffre_aes_core"
-version = "1.0.0"
-source = "git+https://github.com/sebnoy/chiffre-aes-core?rev=693b2a5#693b2a5f0a7c47e2addaf0d7f85efdf40c541f71"
+version = "2.1.0"
+source = "git+https://github.com/sebnoy/chiffre-aes-core?tag=v2.1.0#abc83906d3e9e9b73f8220ac95f0694a2341ac9d"
 dependencies = [
  "aes-gcm",
  "argon2",
@@ -364,9 +364,9 @@ dependencies = [
 
 [[package]]
 name = "ctutils"
-version = "0.4.2"
+version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7d5515a3834141de9eafb9717ad39eea8247b5674e6066c404e8c4b365d2a29e"
+checksum = "38d28fb6aa7dd680b3ffd1a3e64e115c177bdba63c0ae7f9cd48129ff05c4fa0"
 dependencies = [
  "cmov",
 ]
