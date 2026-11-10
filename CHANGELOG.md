@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.1
+
+**Aucun changement de code.** Dépendance : tag `v3.1.0` de `chiffre_aes_core`
+(ajout de `decrypt_bytes_from_presented_sender`, sans changement de format).
+Une application qui utilise aussi `chiffre_aes_core` doit le prendre au même
+tag.
+
 ## v2.0.0
 
 **Aucun changement de code.** Passage à `chiffre_aes_core` **v3.0.0**, dont

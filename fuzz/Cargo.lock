@@ -205,7 +205,7 @@ dependencies = [
 
 [[package]]
 name = "chiffre-rsa-core"
-version = "2.0.0"
+version = "2.0.1"
 dependencies = [
  "chiffre_aes_core",
  "pkcs8",
@@ -227,8 +227,8 @@ dependencies = [
 
 [[package]]
 name = "chiffre_aes_core"
-version = "3.0.0"
-source = "git+https://github.com/sebnoy/chiffre-aes-core?tag=v3.0.0#d5d93ab0564887f8b73a19a114bcea54062bee44"
+version = "3.1.0"
+source = "git+https://github.com/sebnoy/chiffre-aes-core?tag=v3.1.0#a8ab641863de622b1cf4f6e865a423a23bd580d0"
 dependencies = [
  "aes-gcm",
  "argon2",

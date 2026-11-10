@@ -38,7 +38,7 @@ cargo license
 ## Dépendance particulière : `chiffre_aes_core`
 
 `chiffre-rsa-core` dépend de `chiffre_aes_core` via son tag Git
-`v3.0.0` (pas encore publiée sur crates.io — voir sa propre
+`v3.1.0` (pas encore publiée sur crates.io — voir sa propre
 `NOTICE.md` pour l'état exact de ses propres dépendances). Cette
 révision apporte le format multi-destinataires (v3, `RawKey`,
 `Recipient`) directement utilisé ici (`use chiffre_aes_core::RawKey`
