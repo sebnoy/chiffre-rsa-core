@@ -10,9 +10,9 @@ clés/trousseau), qui restent des crates séparées.
 
 # Auteur et statut du projet
 
-Ce crate atteint sa v1.2.1. Il s'appuie sur `chiffre-aes-core` v2.1.1
-(tagué), qui apporte le support multi-destinataires (header v2,
-`RawKey`, `Recipient`) utilisé ici — voir [NOTICE.md](./NOTICE.md) pour
+Ce crate atteint sa v2.0.0. Il s'appuie sur `chiffre-aes-core` v3.0.0
+(tagué), qui apporte le format multi-destinataires (v3, `RawKey`,
+`Recipient`) utilisé par `chiffre-rsa-enveloppe` — voir [NOTICE.md](./NOTICE.md) pour
 l'état exact de cette dépendance.
 
 Aucun audit de sécurité externe n'a été réalisé à ce jour. La conception

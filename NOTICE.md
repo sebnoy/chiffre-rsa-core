@@ -38,9 +38,9 @@ cargo license
 ## Dépendance particulière : `chiffre_aes_core`
 
 `chiffre-rsa-core` dépend de `chiffre_aes_core` via son tag Git
-`v2.1.1` (pas encore publiée sur crates.io — voir sa propre
+`v3.0.0` (pas encore publiée sur crates.io — voir sa propre
 `NOTICE.md` pour l'état exact de ses propres dépendances). Cette
-révision apporte le support multi-destinataires (header v2, `RawKey`,
+révision apporte le format multi-destinataires (v3, `RawKey`,
 `Recipient`) directement utilisé ici (`use chiffre_aes_core::RawKey`
 dans `src/lib.rs`). La licence de `chiffre_aes_core` (MIT OR
 Apache-2.0) ne change pas selon la façon dont elle est référencée

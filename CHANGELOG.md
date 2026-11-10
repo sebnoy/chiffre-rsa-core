@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.0.0
+
+**Aucun changement de code.** Passage à `chiffre_aes_core` **v3.0.0**, dont
+le format multi-destinataires v3 remplace le v2 (engagement de clé, signature
+obligatoire de l'expéditeur).
+
+- **Version majeure** : `RawKey` et `Password`, présents dans l'API publique,
+  viennent désormais de `chiffre_aes_core` v3.0.0. Une application qui dépend
+  des deux crates doit utiliser le tag `v3.0.0`, faute de quoi ces types
+  existent en deux versions incompatibles.
+- Le scellement RSA-OAEP de la clé de contenu et la signature RSA-PSS sont
+  inchangés ; `chiffre-rsa-enveloppe` les combine avec le format v3.
+
 ## v1.2.1
 
 Version de maintenance issue d'un audit selon le *Guide de développement
